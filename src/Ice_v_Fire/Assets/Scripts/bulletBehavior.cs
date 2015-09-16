@@ -24,9 +24,10 @@ public class bulletBehavior : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D (Collider2D col) {
-
-		Destroy (col.gameObject);
-		Destroy (gameObject);
+		if (col.tag == "enemy") {
+			col.GetComponent<health>--;
+			Destroy (gameObject);
+		}
 		
 	}
 	
