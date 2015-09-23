@@ -3,14 +3,13 @@ using System.Collections;
 
 public class bulletBehavior : MonoBehaviour {
 	public float speed = 10f;
+	public int damage = 1;
+	public bool isEnemyShot = false;
 	
 	// Use this for initialization
 	void Start () {
-		//GameObject cannon = GameObject.Find ("Canon");
-		//transform.position = cannon.transform.position;
-		
-		//MeshRenderer comp = GetComponent<MeshRenderer> ();
-		//comp.material.color = new Color (1f, 1f, 0);
+		Destroy (gameObject, 15);
+
 	}
 	
 	// Update is called once per frame
@@ -23,12 +22,6 @@ public class bulletBehavior : MonoBehaviour {
 		
 		
 	}
-	void OnTriggerEnter2D (Collider2D col) {
-		if (col.tag == "enemy") {
-			col.GetComponent<health>--;
-			Destroy (gameObject);
-		}
-		
-	}
+
 	
 }

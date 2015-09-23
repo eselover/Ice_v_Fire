@@ -10,6 +10,7 @@ public class playerControler : MonoBehaviour {
 	public float bulletDelay = .25f;
 	public float friction = 20f;
 	public int health = 20;
+	public float maxVelocity = 100;
 	// Use this for initialization
 	void Start () {
 	
@@ -47,11 +48,11 @@ public class playerControler : MonoBehaviour {
 		
 		if (dirx == 0) { //no key pressed
 			if (velocity.x > 0){
-				velocity.x -= acceleration.x * Time.deltaTime * friction;
+				velocity.x -= acceleration.x * Time.deltaTime;
 				if (velocity.x < 0) velocity.x = 0;
 			}
 			if (velocity.x < 0){
-				velocity.x += acceleration.x * Time.deltaTime * friction;
+				velocity.x += acceleration.x * Time.deltaTime;
 				if (velocity.x > 0) velocity.x = 0;
 			}
 		} else { //left or right pressed
@@ -62,17 +63,22 @@ public class playerControler : MonoBehaviour {
 		
 		if (diry == 0) { //no key pressed
 			if (velocity.y > 0){
-				velocity.y -= acceleration.y * Time.deltaTime * friction;
+				velocity.y -= acceleration.y * Time.deltaTime;
 				if (velocity.y < 0) velocity.y = 0;
 			}
 			if (velocity.y < 0){
-				velocity.y += acceleration.y * Time.deltaTime * friction;
+				velocity.y += acceleration.y * Time.deltaTime;
 				if (velocity.y > 0) velocity.y = 0;
 			}
 		} else { //left or right pressed
 			velocity.y += acceleration.y * diry * Time.deltaTime;
 		}
-		
+
+		print (velocity);
+		if (velocity.x >= maxVelocity) velocity.x = maxVelocity;
+		if (velocity.x <= -maxVelocity) velocity.x = -maxVelocity;
+		if (velocity.y >= maxVelocity) velocity.y = maxVelocity;
+		if (velocity.y <= -maxVelocity) velocity.y = -maxVelocity;
 		
 		pos.x += velocity.x * Time.deltaTime;
 		pos.y += velocity.y * Time.deltaTime;
