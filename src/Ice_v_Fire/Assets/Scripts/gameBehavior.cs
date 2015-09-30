@@ -17,8 +17,12 @@ public class gameBehavior : MonoBehaviour {
 	}
 	IEnumerator SpawnEnemies(){
 		while (true) {
+			for (int i = 0; i < 10; i++) {
 			Instantiate(enemyPrefab);
 			yield return new WaitForSeconds(0.5f);
+
+			}
+			yield return new WaitForSeconds (5);
 		}
 	}
 }
