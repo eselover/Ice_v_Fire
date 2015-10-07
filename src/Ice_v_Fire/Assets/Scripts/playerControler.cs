@@ -32,7 +32,7 @@ public class playerControler : MonoBehaviour {
 
 	}
 	private void BulletUpdate(){
-		if (Input.GetAxisRaw ("Jump") == 1) {
+		if (Input.GetAxisRaw ("Fire1") == 1) {
 			if (timeUntilNextBullet < 0) {
 				Instantiate (bullet, transform.position + new Vector3(0,.5f,0), Quaternion.identity);
 				timeUntilNextBullet = bulletDelay;

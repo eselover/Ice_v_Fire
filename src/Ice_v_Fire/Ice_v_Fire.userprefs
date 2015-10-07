@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\gameBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\Desktop\quiz4\Assets\TwinStickController.cs">
     <Files>
-      <File FileName="Assets\Scripts\gameBehavior.cs" Line="19" Column="17" />
+      <File FileName="..\..\..\..\..\Desktop\quiz4\Assets\TwinStickController.cs" Line="15" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
