@@ -11,6 +11,7 @@ public class HealthScript : MonoBehaviour {
 		hp -= damageCount;
 
 		if (hp <= 0) {
+
 			Destroy (gameObject);
 		}
 		

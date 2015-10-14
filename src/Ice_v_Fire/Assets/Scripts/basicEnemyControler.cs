@@ -12,23 +12,25 @@ public class basicEnemyControler : MonoBehaviour {
 
 	bool firing = true;
 
-	// Use this for initialization
+
 	void Start () {
 		Reset ();
-		
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		
+		MoveUpdate ();
+
+		BulletUpdate ();
+		
+
+	}
+	private void MoveUpdate(){
 		//position
 		Vector3 pos = transform.position;
 		pos.y -= fallspeed * Time.deltaTime;
 		transform.position = pos;
 
-		//fire
-		BulletUpdate ();
-		
 		//check if below cam & reset
 		if (transform.position.y <= -8)
 			Destroy(gameObject);

@@ -1,8 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\Desktop\quiz4\Assets\TwinStickController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControler.cs">
     <Files>
-      <File FileName="..\..\..\..\..\Desktop\quiz4\Assets\TwinStickController.cs" Line="15" Column="17" />
+      <File FileName="Assets\Scripts\playerControler.cs" Line="107" Column="15" />
+      <File FileName="Assets\Scripts\bulletBehavior.cs" Line="13" Column="3" />
+      <File FileName="Assets\Scripts\basicEnemyControler.cs" Line="28" Column="28" />
+      <File FileName="Assets\Scripts\DestroyByContact.cs" Line="23" Column="32" />
+      <File FileName="Assets\Scripts\HealthScript.cs" Line="28" Column="5" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

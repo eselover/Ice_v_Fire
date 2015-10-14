@@ -19,7 +19,7 @@ public class bulletBehavior : MonoBehaviour {
 		pos.y += speed * Time.deltaTime;
 		transform.position = pos;
 		
-		if (pos.y > 8) Destroy (gameObject);
+		if (pos.y > 8 || pos.y < -8) Destroy (gameObject);
 		
 		
 	}

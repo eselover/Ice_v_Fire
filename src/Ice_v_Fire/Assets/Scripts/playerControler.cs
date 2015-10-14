@@ -11,8 +11,11 @@ public class playerControler : MonoBehaviour {
 	public float friction = 20f;
 	public float maxVelocity = 100;
 	// Use this for initialization
+	public GUIText healthText;
+	public Camera cam;
+
 	void Start () {
-	
+		healthText.text = GetComponent<HealthScript>().hp.ToString();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +31,8 @@ public class playerControler : MonoBehaviour {
 
 		//Movement
 		MovementUpdate (dirx, diry);
+		//Text
+		UpdateText ();
 
 	}
 	private void BulletUpdate(){
@@ -98,11 +103,21 @@ public class playerControler : MonoBehaviour {
 			//bounce
 			velocity.y *= 0f;
 		}
-		if (pos.y > 4.5f) {
-			pos.y = 4.5f;
+		if (pos.y > 2.5f) {
+			pos.y = 2.5f;
 			//bounce
 			velocity.y *= 0f;
 		}
 		transform.position = pos;
+	}
+	public void UpdateText(){
+		//get screenspace of player
+		Vector3 screenPos = cam.WorldToScreenPoint (transform.position);
+		Debug.Log (screenPos);
+		//move text to pos
+		healthText.pixelOffset = new Vector2 (screenPos.x+5, screenPos.y-15);
+
+		healthText.text = GetComponent<HealthScript> ().hp.ToString();
+
 	}
 }
