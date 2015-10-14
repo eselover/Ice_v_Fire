@@ -14,6 +14,7 @@ public class bulletBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//if (isEnemyShot) speed *= -1;
 		Vector3 pos = transform.position;
 		pos.y += speed * Time.deltaTime;
 		transform.position = pos;

@@ -9,7 +9,6 @@ public class playerControler : MonoBehaviour {
 	float timeUntilNextBullet = 0;
 	public float bulletDelay = .25f;
 	public float friction = 20f;
-	public int health = 20;
 	public float maxVelocity = 100;
 	// Use this for initialization
 	void Start () {

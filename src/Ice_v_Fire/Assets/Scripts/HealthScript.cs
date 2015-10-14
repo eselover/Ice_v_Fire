@@ -17,17 +17,16 @@ public class HealthScript : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D otherCollider)
 	{
+		Debug.Log ("hit");
 		// Is this a shot?
 		bulletBehavior bullet = otherCollider.gameObject.GetComponent<bulletBehavior>();
-		if (bullet != null)
-		{
+		if (bullet != null){
 			// Avoid friendly fire
-			if (bullet.isEnemyShot != isEnemy)
-			{
+			if (bullet.isEnemyShot != isEnemy){
 				Damage(bullet.damage);
 				
 				// Destroy the shot
-				Destroy(bullet.gameObject); // Remember to always target the game object, otherwise you will just remove the script
+				Destroy(bullet.gameObject); 
 			}
 		}
 	}
