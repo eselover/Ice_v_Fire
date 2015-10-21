@@ -37,13 +37,16 @@ public class basicEnemyControler : MonoBehaviour {
 	}
 	private void BulletUpdate(){
 		if (firing) {
+			//check to see if it is time to fire
 			if (timeUntilNextBullet < 0) {
 				Instantiate (bullet, transform.position + new Vector3(0,-.5f,0), Quaternion.identity);
 				timeUntilNextBullet = bulletDelay;
 			} else {
+				//subtract from countdown timer
 				timeUntilNextBullet -= Time.deltaTime;
 			}
 		} else {
+			//if not firing set waittime to 0
 			timeUntilNextBullet = 0;
 		}
 	}

@@ -8,7 +8,7 @@ public class bulletBehavior : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		Destroy (gameObject, 15);
+		Destroy (gameObject, 5);
 
 	}
 	
