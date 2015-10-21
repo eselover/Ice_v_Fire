@@ -3,7 +3,7 @@ using System.Collections;
 
 public class gameBehavior : MonoBehaviour {
 	public GameObject enemyPrefab;
-	float timeUntilNextSpawn = 0;
+
 	
 	
 	void Start () {
