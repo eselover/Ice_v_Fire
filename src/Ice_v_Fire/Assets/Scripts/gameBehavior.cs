@@ -15,6 +15,9 @@ public class gameBehavior : MonoBehaviour {
 	void Update () {	
 		
 	}
+	/// <summary>
+	/// Spawn Enemies continuously 
+	/// </summary>
 	IEnumerator SpawnEnemies(){
 		while (true) { //loop
 			for (int i = 0; i < 15; i++) {

@@ -16,9 +16,12 @@ public class HealthScript : MonoBehaviour {
 		}
 		
 	}
+	/// <summary>
+	/// when collidied check if its a bullet, take damage if yes and destyoy bullet
+	/// </summary>
 	void OnTriggerEnter2D(Collider2D otherCollider)
 	{
-		Debug.Log ("hit");
+		//Debug.Log ("hit");
 		// Is this a shot?
 		bulletBehavior bullet = otherCollider.gameObject.GetComponent<bulletBehavior>();
 		if (bullet != null){

@@ -35,6 +35,9 @@ public class playerControler : MonoBehaviour {
 		UpdateText ();
 
 	}
+	/// <summary>
+	/// Check if firing, instantiate bullets, update cooldown
+	/// </summary>
 	private void BulletUpdate(){
 		if (Input.GetAxisRaw ("Fire1") == 1) {
 			if (timeUntilNextBullet < 0) {
@@ -47,6 +50,9 @@ public class playerControler : MonoBehaviour {
 			timeUntilNextBullet = 0;
 		}
 	}
+	/// <summary>
+	/// Update movement
+	/// </summary>
 	private void MovementUpdate(float dirx, float diry){
 		Vector3 pos = transform.position;
 		
@@ -110,6 +116,9 @@ public class playerControler : MonoBehaviour {
 		}
 		transform.position = pos;
 	}
+	/// <summary>
+	/// Update temp health gui position
+	/// </summary>
 	public void UpdateText(){
 		//get screenspace of player
 		Vector3 screenPos = cam.WorldToScreenPoint (transform.position);

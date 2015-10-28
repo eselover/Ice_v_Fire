@@ -1,11 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Physics-Puzzle-Project\350 Game\Assets\Scripts\ClickToMove.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControler.cs">
     <Files>
-      <File FileName="..\..\..\Physics-Puzzle-Project\350 Game\Assets\Scripts\DetonateExplosive.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\Physics-Puzzle-Project\350 Game\Assets\Scripts\FlyController.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\Physics-Puzzle-Project\350 Game\Assets\Scripts\PlaceExplosive.cs" Line="1" Column="1" />
-      <File FileName="..\..\..\Physics-Puzzle-Project\350 Game\Assets\Scripts\ClickToMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\playerControler.cs" Line="133" Column="1" />
+      <File FileName="Assets\Scripts\basicEnemyControler.cs" Line="68" Column="1" />
+      <File FileName="Assets\Scripts\bulletBehavior.cs" Line="29" Column="1" />
+      <File FileName="Assets\Scripts\gameBehavior.cs" Line="33" Column="1" />
+      <File FileName="Assets\Scripts\HealthScript.cs" Line="20" Column="81" />
+      <File FileName="Assets\Scripts\Mover.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

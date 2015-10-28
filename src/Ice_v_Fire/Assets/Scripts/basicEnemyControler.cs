@@ -25,6 +25,9 @@ public class basicEnemyControler : MonoBehaviour {
 		
 
 	}
+	/// <summary>
+	/// Move enemy according to fallspeed
+	/// </summary>
 	private void MoveUpdate(){
 		//position
 		Vector3 pos = transform.position;
@@ -35,6 +38,9 @@ public class basicEnemyControler : MonoBehaviour {
 		if (transform.position.y <= -8)
 			Destroy(gameObject);
 	}
+	/// <summary>
+	/// Check if shooting, instantiate bullets, update cooldown
+	/// </summary>
 	private void BulletUpdate(){
 		if (firing) {
 			//check to see if it is time to fire
@@ -50,6 +56,9 @@ public class basicEnemyControler : MonoBehaviour {
 			timeUntilNextBullet = 0;
 		}
 	}
+	/// <summary>
+	/// reset position to top UNUSED FUNCTION
+	/// </summary>
 	void Reset(){
 		transform.position = new Vector3 (Random.Range (-10, 10), Random.Range (8, 12), 0);
 		fallspeed = Random.Range (fallSpeedMin, fallspeedMax);
