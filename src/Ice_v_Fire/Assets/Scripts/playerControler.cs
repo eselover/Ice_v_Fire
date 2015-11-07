@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class playerControler : MonoBehaviour {
 
@@ -11,11 +12,13 @@ public class playerControler : MonoBehaviour {
 	public float friction = 20f;
 	public float maxVelocity = 100;
 	// Use this for initialization
-	public GUIText healthText;
 	public Camera cam;
+	public Slider slider;
+	public HealthScript healthScript;
 
 	void Start () {
-		healthText.text = GetComponent<HealthScript>().hp.ToString();
+		healthScript = GetComponent<HealthScript> ();
+		slider.maxValue = healthScript.hp;
 	}
 	
 	// Update is called once per frame
@@ -120,13 +123,7 @@ public class playerControler : MonoBehaviour {
 	/// Update temp health gui position
 	/// </summary>
 	public void UpdateText(){
-		//get screenspace of player
-		Vector3 screenPos = cam.WorldToScreenPoint (transform.position);
-		Debug.Log (screenPos);
-		//move text to pos
-		healthText.pixelOffset = new Vector2 (screenPos.x+5, screenPos.y-15);
-
-		healthText.text = GetComponent<HealthScript> ().hp.ToString();
-
+		Debug.Log (healthScript.hp);
+		slider.value = healthScript.hp;
 	}
 }
